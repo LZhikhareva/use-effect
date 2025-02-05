@@ -37,13 +37,15 @@ li {
 }
 
 .details {
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
 .details-img {
-  min-height: 200px;
+  margin-top: 15px;
+  width: 300px;
 }
 
 .details-item {

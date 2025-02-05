@@ -14,6 +14,7 @@ export default function Details(props) {
         const data = await response.json();
         setActive(data)
       } catch (e) {
+        console.log(e)
       }
     }
   }
@@ -22,7 +23,7 @@ export default function Details(props) {
     <div className='details'>
       {activeInfo && activeInfo.details && (
         <>
-          <img className='details-img' src={activeInfo.avatar} alt="Картинка в процессе загрузки" />
+          <img className='details-img' src={activeInfo.avatar + activeInfo.id} alt="Картинка в процессе загрузки" />
           <div className='details-item'>Name: {activeInfo.name}</div>
           <div className='details-item'>City: {activeInfo.details.city}</div>
           <div className='details-item'>Company: {activeInfo.details.company}</div>
